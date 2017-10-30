@@ -1,0 +1,25 @@
+@import "colors";
+
+header#page-header {
+  color: $primary-color;
+  background: $background-color;
+  padding: 5px;
+
+  h1 {
+    margin-left: 10px;
+  }
+}
+
+footer#page-footer {
+  text-align: center;
+  padding: 5px;
+  color: #237CBE;
+  background: $primary-color;
+  margin-top: 20px;
+}
+
+aside#sidebar {
+  float: right;
+  background: $primary-color;
+  width: 200px;
+}
