@@ -35,6 +35,7 @@
   <nav>
     <%= link_to "Edit Movie", edit_movie_path(@movie) %> |
     <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' }%> |
-    <%= link_to pluralize(@movie.reviews.size, "review"), movie_reviews_path(@movie) %>
+    <%= link_to pluralize(@movie.reviews.size, "review"), movie_reviews_path(@movie) %> <br /><br  />
+    <%= link_to "Write a Review", new_movie_review_path(@movie) %>
   </nav>
 </article>
