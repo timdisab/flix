@@ -9,6 +9,10 @@ class Movie < ApplicationRecord
     @movies = Movie.where("released_on <= ?", Time.now).order('released_on desc')
   end
 
+  def average_stars
+    reviews.average(:stars)
+  end
+
   validates :title, :released_on, :duration, presence: true
   validates :description, length: { minimum: 25 }
   validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
